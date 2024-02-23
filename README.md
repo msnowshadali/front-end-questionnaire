@@ -19,3 +19,19 @@ function sum(num) {
 console.log(sum(1)(2)(3)(3)());
 
 Currying 
+
+Example 2
+
+function sum(a, b){
+
+    if(b===undefined){
+        return (b)=>{
+            return a+b;
+        }
+    }
+
+    return a + b;
+}
+
+sum(1,2);
+sum(1)(2);
